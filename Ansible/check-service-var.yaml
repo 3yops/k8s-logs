@@ -1,0 +1,12 @@
+--- #this yaml is for get service state from the defined server.
+
+-  hosts: centos
+   become: yes
+   vars:
+     target_service: httpd
+     target_state: started
+   tasks:
+     - name: ensure the httpd service is running
+       service:
+         name: "{{target_service}}"
+         state: "{{taget_state}}"
