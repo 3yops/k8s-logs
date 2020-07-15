@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  webapp
+  namespace: web
+  labels:
+    name:  webapp
+spec:
+  template:
+    metadata:
+      labels:
+        name:  webapp
+    spec:
+      containers:
+      - image:  linuxacademycontent/podofminerva
+        name:  webapp-ctr
+      restartPolicy: Always
+      imagePullPolicy: Always
