@@ -9,4 +9,4 @@
      - name: ensure the httpd service is running
        service:
          name: "{{target_service}}"
-         state: "{{taget_state}}"
+         state: "{{target_state}}"
