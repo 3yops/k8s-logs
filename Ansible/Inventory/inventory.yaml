@@ -1,0 +1,12 @@
+all:
+  hosts:
+    sw-n1
+  children:
+    httpd:
+      hosts:
+        sw-n1
+        sw-n2
+    labserver:
+      hosts:
+        sw-n[1:2]
+        
